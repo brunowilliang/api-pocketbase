@@ -1,0 +1,77 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+*.tgz
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# TypeScript
+*.tsbuildinfo
+
+# Package manager files
+yarn.lock
+package-lock.json
+
+# PocketBase - Ignore heavy files
+database/pocketbase
+database/pb_data/
+database/pb_hooks/
+database/pb_public/
+
+# Only keep Docker configs
+!database/Dockerfile
+!database/.dockerignore
+!database/docker-compose.yml
+
+# Database - Keep structure but ignore some runtime files
+database/pb_data/logs/
+database/pb_data/backups/
+database/pb_data/*.db-shm
+database/pb_data/*.db-wal 

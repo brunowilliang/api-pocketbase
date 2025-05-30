@@ -1,0 +1,27 @@
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Development files
+.env.local
+.env.development
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Don't ignore pb_data as we need it for configurations
+# pb_data will be copied intentionally 

@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  pocketbase:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      # Persist database and configurations
+      - pb_data:/app/pb_data
+      # Mount hooks directory for development
+      - ./pb_hooks:/app/pb_hooks:rw
+      # Mount public files directory
+      - ./pb_public:/app/pb_public:rw
+    environment:
+      # Add any environment variables here
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  pb_data:
+    driver: local 
