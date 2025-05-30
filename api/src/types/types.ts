@@ -10,6 +10,7 @@ export interface Users {
     avatar: string
     rule: 'test 1' | 'test 2' | 'test 3'
     dev_name: string
+    dev_surname: string
     created: string
     updated: string
 }
