@@ -9,6 +9,7 @@ export interface Users {
     surname: string
     avatar: string
     rule: 'test 1' | 'test 2' | 'test 3'
+    dev_name: string
     created: string
     updated: string
 }

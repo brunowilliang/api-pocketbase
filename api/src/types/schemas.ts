@@ -13,6 +13,7 @@ export const usersSchema = z.object({
     surname: z.string().optional(),
     avatar: z.string().optional(),
     rule: z.enum(["test 1", "test 2", "test 3"]).optional(),
+    dev_name: z.string().optional(),
     created: z.string().regex(DATETIME_REGEX).optional(),
     updated: z.string().regex(DATETIME_REGEX).optional(),
 })
