@@ -10,8 +10,8 @@ RUN bun install --frozen-lockfile --production
 # Copy source code
 COPY . .
 
-# Create non-root user
-RUN adduser -D -s /bin/sh -u 1000 apiuser
+# Create non-root user (Ubuntu/Debian syntax)
+RUN useradd -r -u 1000 -m -c "api user" -d /app -s /bin/bash apiuser
 RUN chown -R apiuser:apiuser /app
 USER apiuser
 
