@@ -753,6 +753,20 @@ migrate((app) => {
           "type": "text"
         },
         {
+          "autogeneratePattern": "",
+          "hidden": false,
+          "id": "text2432239470",
+          "max": 0,
+          "min": 0,
+          "name": "dev_auto_migrate",
+          "pattern": "",
+          "presentable": false,
+          "primaryKey": false,
+          "required": false,
+          "system": false,
+          "type": "text"
+        },
+        {
           "hidden": false,
           "id": "autodate2990389176",
           "name": "created",
@@ -848,8 +862,8 @@ migrate((app) => {
         "body": "<p>Hello,</p>\n<p>Click on the button below to confirm your new email address.</p>\n<p>\n  <a class=\"btn\" href=\"{APP_URL}/_/#/auth/confirm-email-change/{TOKEN}\" target=\"_blank\" rel=\"noopener\">Confirm new email</a>\n</p>\n<p><i>If you didn't ask to change your email address, you can ignore this email.</i></p>\n<p>\n  Thanks,<br/>\n  {APP_NAME} team\n</p>",
         "subject": "Confirm your {APP_NAME} new email address"
       },
-      "createRule": null,
-      "deleteRule": null,
+      "createRule": "",
+      "deleteRule": "",
       "emailChangeToken": {
         "duration": 1800
       },
@@ -967,7 +981,7 @@ migrate((app) => {
         "CREATE UNIQUE INDEX `idx_tokenKey_pbc_2519681326` ON `company` (`tokenKey`)",
         "CREATE UNIQUE INDEX `idx_email_pbc_2519681326` ON `company` (`email`) WHERE `email` != ''"
       ],
-      "listRule": null,
+      "listRule": "",
       "manageRule": null,
       "mfa": {
         "duration": 1800,
@@ -1008,7 +1022,7 @@ migrate((app) => {
       },
       "system": false,
       "type": "auth",
-      "updateRule": null,
+      "updateRule": "",
       "verificationTemplate": {
         "body": "<p>Hello,</p>\n<p>Thank you for joining us at {APP_NAME}.</p>\n<p>Click on the button below to verify your email address.</p>\n<p>\n  <a class=\"btn\" href=\"{APP_URL}/_/#/auth/confirm-verification/{TOKEN}\" target=\"_blank\" rel=\"noopener\">Verify</a>\n</p>\n<p>\n  Thanks,<br/>\n  {APP_NAME} team\n</p>",
         "subject": "Verify your {APP_NAME} email"
@@ -1016,7 +1030,7 @@ migrate((app) => {
       "verificationToken": {
         "duration": 259200
       },
-      "viewRule": null
+      "viewRule": ""
     },
     {
       "authAlert": {
@@ -1034,8 +1048,8 @@ migrate((app) => {
         "body": "<p>Hello,</p>\n<p>Click on the button below to confirm your new email address.</p>\n<p>\n  <a class=\"btn\" href=\"{APP_URL}/_/#/auth/confirm-email-change/{TOKEN}\" target=\"_blank\" rel=\"noopener\">Confirm new email</a>\n</p>\n<p><i>If you didn't ask to change your email address, you can ignore this email.</i></p>\n<p>\n  Thanks,<br/>\n  {APP_NAME} team\n</p>",
         "subject": "Confirm your {APP_NAME} new email address"
       },
-      "createRule": null,
-      "deleteRule": null,
+      "createRule": "",
+      "deleteRule": "",
       "emailChangeToken": {
         "duration": 1800
       },
@@ -1125,20 +1139,6 @@ migrate((app) => {
           "type": "text"
         },
         {
-          "autogeneratePattern": "",
-          "hidden": false,
-          "id": "text2938489260",
-          "max": 0,
-          "min": 0,
-          "name": "test_2",
-          "pattern": "",
-          "presentable": false,
-          "primaryKey": false,
-          "required": false,
-          "system": false,
-          "type": "text"
-        },
-        {
           "hidden": false,
           "id": "autodate2990389176",
           "name": "created",
@@ -1167,7 +1167,7 @@ migrate((app) => {
         "CREATE UNIQUE INDEX `idx_tokenKey_pbc_1744024623` ON `employee` (`tokenKey`)",
         "CREATE UNIQUE INDEX `idx_email_pbc_1744024623` ON `employee` (`email`) WHERE `email` != ''"
       ],
-      "listRule": null,
+      "listRule": "",
       "manageRule": null,
       "mfa": {
         "duration": 1800,
@@ -1208,7 +1208,7 @@ migrate((app) => {
       },
       "system": false,
       "type": "auth",
-      "updateRule": null,
+      "updateRule": "",
       "verificationTemplate": {
         "body": "<p>Hello,</p>\n<p>Thank you for joining us at {APP_NAME}.</p>\n<p>Click on the button below to verify your email address.</p>\n<p>\n  <a class=\"btn\" href=\"{APP_URL}/_/#/auth/confirm-verification/{TOKEN}\" target=\"_blank\" rel=\"noopener\">Verify</a>\n</p>\n<p>\n  Thanks,<br/>\n  {APP_NAME} team\n</p>",
         "subject": "Verify your {APP_NAME} email"
@@ -1216,7 +1216,7 @@ migrate((app) => {
       "verificationToken": {
         "duration": 259200
       },
-      "viewRule": null
+      "viewRule": ""
     }
   ];
 

@@ -5,9 +5,19 @@ const fastify = Fastify({
   logger: false
 });
 
-fastify.get("/", async (request, reply) => {
+fastify.get("/users", async (request, reply) => {
 	const records = await api.collection('users').getFullList();
 	reply.send(records);
+});
+
+fastify.get("/company", async (request, reply) => {
+  const records = await api.collection('company').getFullList();
+  reply.send(records);
+});
+
+fastify.get("/employee", async (request, reply) => {
+  const records = await api.collection('employee').getFullList();
+  reply.send(records);
 });
 
 const start = async () => {

@@ -15,6 +15,7 @@ export const usersSchema = z.object({
     rule: z.enum(["test 1", "test 2", "test 3"]).optional(),
     dev_name: z.string().optional(),
     dev_surname: z.string().optional(),
+    dev_auto_migrate: z.string().optional(),
     created: z.string().regex(DATETIME_REGEX).optional(),
     updated: z.string().regex(DATETIME_REGEX).optional(),
 })
@@ -39,7 +40,6 @@ export const employeeSchema = z.object({
     emailVisibility: z.boolean().optional(),
     verified: z.boolean().optional(),
     test: z.string().optional(),
-    test_2: z.string().optional(),
     created: z.string().regex(DATETIME_REGEX).optional(),
     updated: z.string().regex(DATETIME_REGEX).optional(),
 })

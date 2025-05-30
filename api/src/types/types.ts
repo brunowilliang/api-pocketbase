@@ -11,6 +11,7 @@ export interface Users {
     rule: 'test 1' | 'test 2' | 'test 3'
     dev_name: string
     dev_surname: string
+    dev_auto_migrate: string
     created: string
     updated: string
 }
@@ -35,7 +36,6 @@ export interface Employee {
     emailVisibility: boolean
     verified: boolean
     test: string
-    test_2: string
     created: string
     updated: string
 }

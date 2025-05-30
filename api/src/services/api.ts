@@ -1,6 +1,6 @@
-import PocketBase from 'pocketbase';
+const POCKETBASE_URL = process.env.POCKETBASE_URL || 'https://database.apps.brunowillian.com';
 
-// Use environment variable or fallback to production URL
-const POCKETBASE_URL = process.env.POCKETBASE_URL || 'https://api.apps.brunowillian.com';
+import { PocketBaseTS } from 'pocketbase-ts'
+import type { Schema } from '../types/types';
 
-export const api = new PocketBase(POCKETBASE_URL);
+export const api = new PocketBaseTS<Schema>(POCKETBASE_URL);
