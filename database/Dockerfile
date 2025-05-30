@@ -18,7 +18,11 @@ RUN wget https://github.com/pocketbase/pocketbase/releases/download/v${POCKETBAS
     && rm pocketbase_${POCKETBASE_VERSION}_linux_amd64.zip
 
 # Create necessary directories
-RUN mkdir -p /app/pb_data /app/pb_hooks /app/pb_public
+RUN mkdir -p /app/pb_data /app/pb_hooks /app/pb_public /app/pb_migrations
+
+# Copy migrations and hooks from build context
+COPY pb_migrations/ /app/pb_migrations/
+COPY pb_hooks/ /app/pb_hooks/
 
 # Set proper permissions
 RUN chown -R 1000:1000 /app
