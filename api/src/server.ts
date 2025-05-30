@@ -12,8 +12,8 @@ fastify.get("/", async (request, reply) => {
 
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 }).then(() => {
-      console.log("Server is running");
+    await fastify.listen({ port: 3000, host: '0.0.0.0' }).then(() => {
+      console.log("Server is running on 0.0.0.0:3000");
     });
   } catch (err) {
     fastify.log.error(err)
