@@ -9,8 +9,17 @@ export interface Users {
     surname: string
     avatar: string
     rule: 'test 1' | 'test 2' | 'test 3'
-    newRule: string
-    options: 'option 1' | 'option 2' | 'option 3'
+    created: string
+    updated: string
+}
+
+export interface Company {
+    id: string
+    password: string
+    tokenKey: string
+    email: string
+    emailVisibility: boolean
+    verified: boolean
     created: string
     updated: string
 }
@@ -27,6 +36,9 @@ export interface Users {
 export type Schema = {
     users: {
         type: Users
+    }
+    company: {
+        type: Company
     }
 }
 

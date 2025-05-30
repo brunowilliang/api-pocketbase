@@ -13,8 +13,17 @@ export const usersSchema = z.object({
     surname: z.string().optional(),
     avatar: z.string().optional(),
     rule: z.enum(["test 1", "test 2", "test 3"]).optional(),
-    newRule: z.string().optional(),
-    options: z.enum(["option 1", "option 2", "option 3"]).optional(),
+    created: z.string().regex(DATETIME_REGEX).optional(),
+    updated: z.string().regex(DATETIME_REGEX).optional(),
+})
+
+export const companySchema = z.object({
+    id: z.string().regex(/^[a-z0-9]+$/).length(15).optional(),
+    password: z.string().min(8),
+    tokenKey: z.string().min(30).max(60).optional(),
+    email: z.string().email(),
+    emailVisibility: z.boolean().optional(),
+    verified: z.boolean().optional(),
     created: z.string().regex(DATETIME_REGEX).optional(),
     updated: z.string().regex(DATETIME_REGEX).optional(),
 })
