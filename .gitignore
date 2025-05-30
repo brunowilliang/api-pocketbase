@@ -62,7 +62,6 @@ package-lock.json
 # PocketBase - Ignore heavy files
 database/pocketbase
 database/pb_data/
-database/pb_hooks/
 database/pb_public/
 
 # Only keep Docker configs

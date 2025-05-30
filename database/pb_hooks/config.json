@@ -1,0 +1,13 @@
+{
+    "exposeEndpoint": false,
+    "endpointPath": "/schema",
+    "secureEndpoint": true,
+    "tsSchema": {
+        "generateFile": true,
+        "outputPath": "./types.ts"
+    },
+    "zodSchema": {
+        "generateFile": true,
+        "outputPath": "./schemas.ts"
+    }
+}
