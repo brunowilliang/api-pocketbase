@@ -20,6 +20,20 @@ export interface Company {
     email: string
     emailVisibility: boolean
     verified: boolean
+    company_test_2: string
+    created: string
+    updated: string
+}
+
+export interface Employee {
+    id: string
+    password: string
+    tokenKey: string
+    email: string
+    emailVisibility: boolean
+    verified: boolean
+    test: string
+    test_2: string
     created: string
     updated: string
 }
@@ -39,6 +53,9 @@ export type Schema = {
     }
     company: {
         type: Company
+    }
+    employee: {
+        type: Employee
     }
 }
 

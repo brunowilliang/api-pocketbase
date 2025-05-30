@@ -24,6 +24,20 @@ export const companySchema = z.object({
     email: z.string().email(),
     emailVisibility: z.boolean().optional(),
     verified: z.boolean().optional(),
+    company_test_2: z.string().optional(),
+    created: z.string().regex(DATETIME_REGEX).optional(),
+    updated: z.string().regex(DATETIME_REGEX).optional(),
+})
+
+export const employeeSchema = z.object({
+    id: z.string().regex(/^[a-z0-9]+$/).length(15).optional(),
+    password: z.string().min(8),
+    tokenKey: z.string().min(30).max(60).optional(),
+    email: z.string().email(),
+    emailVisibility: z.boolean().optional(),
+    verified: z.boolean().optional(),
+    test: z.string().optional(),
+    test_2: z.string().optional(),
     created: z.string().regex(DATETIME_REGEX).optional(),
     updated: z.string().regex(DATETIME_REGEX).optional(),
 })
